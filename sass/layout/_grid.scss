@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(auto-fit, minmax(47rem, 1fr));
+  row-gap: 3rem;
+}

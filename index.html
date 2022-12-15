@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <section class="container">
+        <div class="mobile-menu">
+          <button class="menu-icon-close">
+            <img src="images/icon-close.svg" alt="icon-close" >
+          </button>
+          <nav class="mobile-navigation">
+            <ul class="mobile-navigation__list">
+              <li class="mobile-navigation__list-item"><a href="#" class="mobile-navigation__link">Collections</a></li>
+              <li class="mobile-navigation__list-item"><a href="#" class="mobile-navigation__link">Men</a></li>
+              <li class="mobile-navigation__list-item"><a href="#" class="mobile-navigation__link">Women</a></li>
+              <li class="mobile-navigation__list-item"><a href="#" class="mobile-navigation__link">About</a></li>
+              <li class="mobile-navigation__list-item"><a href="#" class="mobile-navigation__link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      <header class="header u-margin-bottom">
+        <button  class="header__menu">
+          <img src="images/icon-menu.svg" alt="icon-menu"/>
+        </button>
+        
+        <div class="logo-container">
+          <img src="images/logo.svg" alt="Image logo" class="logo" />
+        </div>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__list-item">
+              <a href="#" class="navigation__link">Collections</a>
+              <span class="navigation__link-active-i"></span>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#" class="navigation__link">Men</a>
+              <span class="navigation__link-active-i"></span>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#" class="navigation__link">Women</a>
+              <span class="navigation__link-active-i"></span>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#" class="navigation__link">About</a>
+              <span class="navigation__link-active-i"></span>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#" class="navigation__link">Contact</a>
+              <span class="navigation__link-active-i"></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user">
+          <button class="user__cart">
+            <span class="user__cart-quantity hidden">3</span>
+            <img
+              src="images/icon-cart.svg"
+              alt="Cart icon"
+              class="user__cart-icon"
+            />
+          </button>
+          <img
+            src="images/image-avatar.png"
+            alt="Image of the user"
+            class="user__profile"
+          />
+        </div>
+
+        <div class="user__cart-content hidden">
+          <p class="user__cart-heading">Cart</p>
+          <div class="user__cart-items">
+            
+              <p class="user__cart-empty">Your cart is empty.</p>
+              <!-- <div class="cartne">
+                <img
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt="image-product-1-thumbnail"
+                />
+                <div class="cartne__d">
+                  <p class="cartne__p-name">Fall limited Edition Sneakers</p>
+                  <p class="cartne__p-price">
+                    $125.00 x 3 <span class="cartne__total-price">$375.00</span>
+                  </p>
+                </div>
+
+                <button class="cartne__btn-close">
+                  <img
+                    src="images/icon-delete.svg"
+                    alt="icon-delete"                    
+                  />
+                </button>
+              </div>
+              <button class="cartne__btn-checkout">Checkout</button> -->
+            
+          </div>
+        </div>
+      </header>
+
+      <main class="grid grid--2-cols">
+        <div class="gallery">
+          <div class="gallery__grid">
+            <div class="gallery__images">
+              <button class="btn--slider btn-prev">
+                <img src="images/icon-previous.svg" alt="icon-previous" >
+              </button>
+
+              <button class="btn--slider btn-next">
+                <img src="images/icon-next.svg" alt="icon-next">
+              </button>
+              <img
+                src="images/image-product-1.jpg"
+                alt="Product image"
+                class="gallery__image"
+                data-image-number="1"
+              />
+              <img
+                src="images/image-product-2.jpg"
+                alt="Product image"
+                class="gallery__image"
+                data-image-number="2"
+
+              />
+              <img
+                src="images/image-product-3.jpg"
+                alt="Product image"
+                class="gallery__image"
+                data-image-number="3"
+
+              />
+              <img
+                src="images/image-product-4.jpg"
+                alt="Product image"
+                class="gallery__image"
+                data-image-number="4"
+
+              />
+            </div>
+            <div class="gallery__th-images">
+              <button
+                class="gallery__img-btn gallery__th-active"
+                data-btn="1"
+              >
+                <img
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt="Thumbnail image"
+                  class="gallery__img-th"
+                />
+              </button>
+
+              <button class="gallery__img-btn" data-btn="2">
+                <img
+                  src="images/image-product-2-thumbnail.jpg"
+                  alt="Thumbnail image"
+                  class="gallery__img-th"
+                />
+              </button>
+
+              <button class="gallery__img-btn" data-btn="3">
+                <img
+                  src="images/image-product-3-thumbnail.jpg"
+                  alt="Thumbnail image"
+                  class="gallery__img-th"
+                />
+              </button>
+
+              <button class="gallery__img-btn" data-btn="4">
+                <img
+                  src="images/image-product-4-thumbnail.jpg"
+                  alt="Thumbnail image"
+                  class="gallery__img-th"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="description">
+          <p class="description__company">Sneaker Company</p>
+          <h1 class="description__sneaker-name">
+            Fall Limited Edition Sneakers
+          </h1>
+          <p class="description__sneaker-d">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="responsive-price">
+          <p>
+            <span class="description__offer-price">$125.00</span>
+            <span class="description__offer">50%</span>
+          </p>
+          <p class="description__original-price">
+            <span class="description__original-na"></span>$250.00
+          </p>
+        </div>
+          <div class="cart">
+            <div class="cart__change">
+              <button class="cart__btn btn__minus">
+                <img
+                  src="images/icon-minus.svg"
+                  alt="icon-minus"
+                  class="cart__btn-icon"
+                />
+              </button>
+              <span class="cart__quantity">0</span>
+              <button class="cart__btn btn__plus">
+                <img
+                  src="images/icon-plus.svg"
+                  alt="icon-plus"
+                  class="cart__btn-icon"
+                />
+              </button>
+            </div>
+            <button class="cart__add-to-cart">
+              <img
+                src="images/icon-cart-white.svg"
+                alt="icon-cart"
+                class="icon-cart"
+              />
+              <span class="cart__add">Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <div class="popup hidden">
+      <div class="popup__content">
+        <div class="popup__slider">
+          <button class="btn--slider btn--prev">
+            <img src="images/icon-previous.svg" alt="icon-previous" />
+          </button>
+          <button class="btn--slider btn--next">
+            <img src="images/icon-next.svg" alt="icon-next" />
+          </button>
+          <button class="btn--close">
+            <img src="images/icon-close.svg" alt="icon-close" />
+          </button>
+          <div class="popup__pimgs">
+            <img
+              src="images/image-product-1.jpg"
+              alt="Product image"
+              class="popup__pimg"
+              data-popimg="1"
+            />
+            <img src="images/image-product-2.jpg" alt="Product image" class="popup__pimg" data-popimg="2">
+            <img src="images/image-product-3.jpg" alt="Product image" class="popup__pimg" data-popimg="3">
+            <img src="images/image-product-4.jpg" alt="Product image" class="popup__pimg" data-popimg="4">
+          </div>  
+        </div>
+        <div class="popup__thimgs">
+          <button class="popup__thimg__btn popup__thimg-active" data-btn="1">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Thumbnail image"
+              class="popup__thimg "
+             
+            />
+          </button>
+
+          <button class="popup__thimg__btn" data-btn="2">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Thumbnail image"
+              class="popup__thimg"
+             
+            />
+          </button>
+
+          <button class="popup__thimg__btn" data-btn="3">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Thumbnail image"
+              class="popup__thimg"
+             
+            />
+          </button>
+
+          <button class="popup__thimg__btn" data-btn="4">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Thumbnail image"
+              class="popup__thimg"
+             
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <button>
+
+    
+    
+    <!-- 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

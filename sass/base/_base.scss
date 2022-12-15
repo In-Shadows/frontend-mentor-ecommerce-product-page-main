@@ -1,0 +1,51 @@
+:root {
+  --color-primary: #ff7d1a;
+  --color-pale-primary: #ffede0;
+
+  --color-very-dark-blue: #1d2025;
+  --color-dark-grayish-blue: #68707d;
+  --color-grayish-blue: #b6bcc8;
+  --color-light-grayish-blue: #f7f8fd;
+
+  --color-white: #fff;
+
+  --color-black-75p-opacity: rgba(0, 0, 0, 0.75);
+}
+
+//MEDIA BREAKPOINTS
+$bp-largest: 50em; // 800px
+$bp-medium: 37.5em; // 600px
+$bp-smallest: 28.125em; // 450px
+
+// ADVANCED GLOBAL RESET
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and(max-width: $bp-smallest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Kumbh sans', sans-serif;
+  font-weight: 400;
+}
+
+/*
+TODO LIST
+
+style active states of buttons which are in popup
+
+*/
