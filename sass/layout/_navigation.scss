@@ -40,7 +40,8 @@
     color: var(--color-very-dark-blue);
   }
 
-  &__link:active + &__link-active-i {
+  &__link:active + &__link-active-i,
+  &__link:hover + &__link-active-i {
     // width: 100%;
     opacity: 1;
   }

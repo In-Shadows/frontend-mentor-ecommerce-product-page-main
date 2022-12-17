@@ -94,7 +94,8 @@ style active states of buttons which are in popup
     top: 0;
     left: 0;
     transition: all 0.8s ease;
-    display: block; }
+    display: block;
+    cursor: pointer; }
     @media only screen and (max-width: 28.125em) {
       .gallery__image {
         border-radius: 0; } }
@@ -280,7 +281,7 @@ style active states of buttons which are in popup
   .popup__thimg {
     display: block;
     max-width: 100%;
-    transition: all 0.4s; }
+    transition: all 0.4s ease; }
   .popup__thimg-active {
     outline: 3px solid var(--color-primary) !important; }
     .popup__thimg-active .popup__thimg {
@@ -375,7 +376,8 @@ style active states of buttons which are in popup
     text-decoration: none; }
   .navigation__link:active {
     color: var(--color-very-dark-blue); }
-  .navigation__link:active + .navigation__link-active-i {
+  .navigation__link:active + .navigation__link-active-i,
+  .navigation__link:hover + .navigation__link-active-i {
     opacity: 1; }
   .navigation__link:focus {
     outline: none; }

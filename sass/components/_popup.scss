@@ -59,7 +59,7 @@
   &__thimg {
     display: block;
     max-width: 100%;
-    transition: all 0.4s;
+    transition: all 0.4s ease;
   }
 
   &__thimg-active {

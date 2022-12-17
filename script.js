@@ -2,6 +2,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //DOM ELEMENTS
 const header = document.querySelector('.header');
+const imagesContainer = document.querySelector('.gallery__images');
 const images = Array.from(document.querySelectorAll('.gallery__image'));
 const thumbnailImagesContainer = document.querySelector('.gallery__th-images');
 const thumbnailImages = Array.from(
@@ -79,6 +80,16 @@ const togglePopup = function (el, dataAttribute, buttons) {
     activeBtn.classList.add('gallery__th-active');
   }
 };
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+//MAKING THE POPUP VISIBLE
+imagesContainer.addEventListener('click', function (e) {
+  if (e.target.closest('.gallery__image')) {
+    popup.classList.remove('hidden');
+  }
+});
+
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 //EVENT HANDLING
@@ -98,10 +109,6 @@ thumbnailImagesContainer.addEventListener('click', function (e) {
     curMobileImage = Number(btn);
     //SWITCHING THE IMAGE
     slider(curMobileImage - 1, images, thumbnailImages);
-  }
-  // If the button has active class
-  else {
-    popup.classList.remove('hidden');
   }
 });
 
