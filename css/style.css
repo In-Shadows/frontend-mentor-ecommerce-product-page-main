@@ -245,6 +245,9 @@ style active states of buttons which are in popup
   height: 100vh;
   width: 100%;
   backdrop-filter: brightness(20%); }
+  @media only screen and (max-width: 37.5em) {
+    .popup {
+      display: none; } }
   .popup__content {
     max-width: 45rem;
     margin: 10rem auto; }
@@ -326,13 +329,10 @@ style active states of buttons which are in popup
   top: 0;
   left: 0;
   background-color: var(--color-white);
-  height: 100vh;
-  width: 60vw;
-  z-index: 100;
-  padding: 4rem;
-  transform: translateX(-150%);
-  transition: all 0.4s ease;
-  backdrop-filter: brightness(20%); }
+  height: 100%;
+  width: 60%;
+  z-index: 300;
+  padding: 4rem; }
   .mobile-menu .menu-icon-close {
     margin-bottom: 4rem;
     cursor: pointer;
@@ -348,6 +348,17 @@ style active states of buttons which are in popup
     font-weight: 700;
     color: var(--color-very-dark-blue);
     text-decoration: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: brightness(20%);
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+  transform: translateX(-150%);
+  transition: all 0.4s ease; }
 
 .navigation {
   margin-right: auto; }

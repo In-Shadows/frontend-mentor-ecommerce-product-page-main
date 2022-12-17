@@ -7,6 +7,10 @@
   width: 100%;
   backdrop-filter: brightness(20%);
 
+  @media only screen and(max-width: $bp-medium) {
+    display: none;
+  }
+
   &__content {
     max-width: 45rem;
     margin: 10rem auto;

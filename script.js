@@ -2,6 +2,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //DOM ELEMENTS
 const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
 const imagesContainer = document.querySelector('.gallery__images');
 const images = Array.from(document.querySelectorAll('.gallery__image'));
 const thumbnailImagesContainer = document.querySelector('.gallery__th-images');
@@ -253,13 +254,12 @@ popupthImagesContainer.addEventListener('click', function (e) {
 
 header.addEventListener('click', function (e) {
   if (e.target.closest('.header__menu')) {
-    mobileMenu.style.transform = 'translateX(0%)';
-    mobileMenu.style.backdropFilter = 'brightness(20%)';
+    overlay.style.transform = 'translateX(0)';
   }
 });
 
 menuIconClose.addEventListener('click', function (e) {
   if (e.target.closest('.menu-icon-close')) {
-    mobileMenu.style.transform = 'translateX(-150%)';
+    overlay.style.transform = 'translateX(-150%)';
   }
 });
